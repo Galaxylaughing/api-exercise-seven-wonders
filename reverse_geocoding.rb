@@ -5,7 +5,7 @@ Dotenv.load
 
 unknown_locations = [{ lat: 38.8976998, lon: -77.0365534886228}, {lat: 48.4283182, lon: -123.3649533 }, { lat: 41.8902614, lon: 12.493087103595503}]
 
-BASE_URL = "https://us1.locationiq.com/v1/reverse.php?key=YOUR_PRIVATE_TOKEN&lat=LATITUDE&lon=LONGITUDE&format=json"
+BASE_URL = "https://us1.locationiq.org/v1/reverse.php?key=YOUR_PRIVATE_TOKEN&lat=LATITUDE&lon=LONGITUDE&format=json"
 api_key = ENV['GEOCODING_API']
 
 query = {
@@ -50,3 +50,6 @@ locations_data.each do |response_hash|
 end
 
 p known_locations
+
+# known_locations:
+# {"1600 Pennsylvania Avenue Northwest"=>{"house_number"=>"1600", "road"=>"Pennsylvania Avenue Northwest", "neighbourhood"=>"White House Grounds", "city"=>"Washington", "county"=>"District of Columbia", "state"=>"District of Columbia", "country"=>"United States", "postcode"=>"20006", "country_code"=>"us"}, "The Hands of Time: Carrying Books"=>{"name"=>"The Hands of Time: Carrying Books", "neighbourhood"=>"Chinatown", "city"=>"Victoria", "county"=>"Capital", "state"=>"British Columbia", "country"=>"Canada", "country_code"=>"ca"}, "Colosseo/Salvi"=>{"name"=>"Colosseo/Salvi", "neighbourhood"=>"San Paolo", "city"=>"Rome", "state"=>"Roma", "country"=>"Italy", "country_code"=>"it"}}
